@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 
 <installation xmlns="urn:jboss:galleon:provisioning:3.0">
-    <feature-pack location="org.wildfly:wildfly-ee-galleon-pack:${upstream.wildfly.version}"/>
+    <!-- Must set -Dorg.wildfly.glow.maven.settings.xml.url=<path to settings.xml file where JBoss EAP feature-pack can be resolved> -->
+    <feature-pack location="${ee.maven.groupId}:wildfly-ee-galleon-pack:${ee.maven.version}"/>
     <feature-pack location="org.keycloak:keycloak-saml-adapter-galleon-pack:${project.version}"/>
 </installation>
